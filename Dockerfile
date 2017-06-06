@@ -57,3 +57,7 @@ COPY files/opcache*.blacklist /etc/php.d/
 # Cron
 RUN echo '* * * * * php /var/www/html/artisan schedule:run >> /dev/null 2>&1' > /var/spool/cron/crontabs/root
 
+# Composer
+RUN set -ex \
+    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin \
+    && mv /usr/local/bin/composer.phar /usr/local/bin/composer
