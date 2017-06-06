@@ -46,6 +46,9 @@ RUN set -ex \
         bcmath exif gettext mcrypt pcntl \
         soap sockets sysvsem sysvshm xmlrpc xsl zip \
     && apk del .build-php \
+    && rm -f /usr/local/etc/php/conf.d/docker-php-ext-apc.ini \
+    && rm -f /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini \
+    && rm -f /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini \
     && mkdir -p /etc/php.d/
 
 COPY files/*.ini /usr/local/etc/php/conf.d/
