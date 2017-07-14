@@ -1,4 +1,4 @@
-FROM shomatan/php-fpm:7.1.5-alpine
+FROM shomatan/php-fpm:7.1-alpine
 
 MAINTAINER Shoma Nishitateno <shoma416@gmail.com>
 
