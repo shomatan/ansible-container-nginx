@@ -36,13 +36,15 @@ RUN set -ex \
     && docker-php-ext-enable apcu \
     && pecl install apcu_bc-$APCU_BC_VERSION \
     && docker-php-ext-enable apc \
+    && pecl install mcrypt-1.0.1 \
+    && docker-php-ext-enable mcrypt \
     && docker-php-ext-install \
         mysqli \
         opcache \
         gd \
         bz2 \
         pdo pdo_mysql \
-        bcmath exif gettext mcrypt pcntl \
+        bcmath exif gettext pcntl \
         soap sockets sysvsem sysvshm xmlrpc xsl zip \
     && apk del .build-php \
     && rm -f /usr/local/etc/php/conf.d/docker-php-ext-apc.ini \
