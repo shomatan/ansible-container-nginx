@@ -3,7 +3,7 @@ FROM shomatan/php-fpm:7.1-alpine
 LABEL maintainer "Shoma Nishitateno <shoma416@gmail.com>"
 
 # Environment variable
-ARG MYSQL_VERSION=10.1.22-r0
+ARG MYSQL_VERSION=10.1.32-r0
 ARG APCU_VERSION=5.1.8
 ARG APCU_BC_VERSION=1.0.3
 
