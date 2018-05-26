@@ -16,8 +16,8 @@ RUN set -ex \
         libxslt \
     && apk add --no-cache --virtual .build-php \
         $PHPIZE_DEPS \
-        mariadb=$MYSQL_VERSION \
-        mariadb-dev=$MYSQL_VERSION \
+        mariadb \
+        mariadb-dev \
         gd-dev \
         jpeg-dev \
         libpng-dev \
