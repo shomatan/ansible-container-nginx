@@ -1,6 +1,6 @@
 FROM shomatan/php-fpm:5.6-alpine
 
-MAINTAINER Shoma Nishitateno <shoma416@gmail.com>
+LABEL maintainer "Shoma Nishitateno <shoma416@gmail.com>"
 
 # Environment variable
 ARG MYSQL_VERSION=10.1.22-r0
