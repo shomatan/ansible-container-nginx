@@ -1,10 +1,10 @@
-FROM shomatan/php-fpm:7.2-alpine
+FROM shomatan/php-fpm:7.2.10-alpine
 
 LABEL maintainer "Shoma Nishitateno <shoma416@gmail.com>"
 
 # Environment variable
-ARG APCU_VERSION=5.1.8
-ARG APCU_BC_VERSION=1.0.3
+ARG APCU_VERSION=5.1.12
+ARG APCU_BC_VERSION=1.0.4
 
 RUN set -ex \
     && apk update \
