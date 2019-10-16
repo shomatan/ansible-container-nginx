@@ -10,3 +10,5 @@ USER www
 COPY files/docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
+
+CMD ["/usr/local/sbin/php-fpm", "--nodaemonize", "--fpm-config", "/usr/local/etc/php-fpm.conf"]

@@ -41,4 +41,6 @@ echo "########################################################"
 
 echo "** Executing php-fpm"
 
+echo "*** with arguments: $@"
+
 exec /usr/local/bin/docker-entrypoint.sh "$@"
