@@ -3,7 +3,8 @@ set +e
 
 echo "** Preparing php-fpm container for Laravel"
 
-cat > .env <<EOF
+if [ ! -e .env ]; then
+  cat > .env <<EOF
 APP_NAME=Laravel
 APP_ENV=local
 APP_KEY=
@@ -50,6 +51,8 @@ MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
 MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 EOF
+
+fi
 
 php artisan key:generate
 
