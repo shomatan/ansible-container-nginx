@@ -67,7 +67,7 @@ php artisan db:seed --force
 
 chmod 777 -R storage
 
-/usr/sbin/crond
+/usr/sbin/crond -l 1
 
 echo "########################################################"
 
